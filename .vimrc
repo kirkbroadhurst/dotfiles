@@ -13,15 +13,13 @@ Plugin 'gmarik/Vundle.vim'
 
 " add all your plugins here (note older versions of Vundle
 " used Bundle instead of Plugin)
-
+Plugin 'vim-scripts/indentpython.vim'
+Bundle 'Valloric/YouCompleteMe'
 " ...
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-
-set tabstop=4
-set expandtab
 
 " split navigations
 nnoremap <C-J> <C-W><C-J>
@@ -34,3 +32,17 @@ set foldmethod=indent
 set foldlevel=99
 nnoremap <space> za
 
+" python indenting
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix |
+    \ set encoding=utf-8
+
+"define BadWhitespace before using in a match
+highlight BadWhitespace ctermbg=red guibg=darkred
+au BufNewFile,BufRead *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
