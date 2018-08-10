@@ -1,3 +1,5 @@
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 if grep -Fxq "export VISUAL=vim" ~/.bashrc
 then
     echo "export VISUAL already exists"
