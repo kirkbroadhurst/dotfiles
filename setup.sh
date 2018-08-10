@@ -13,3 +13,10 @@ else
 fi
 
 cp .vimrc ~
+
+# run vim and download plugins
+vim -c 'PluginInstall' -c 'qa!'
+
+# now install YouCompleteMe
+cd ~/.vim/bundle/YouCompleteMe
+python -m install 

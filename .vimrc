@@ -46,3 +46,7 @@ au BufNewFile,BufRead *.py
 "define BadWhitespace before using in a match
 highlight BadWhitespace ctermbg=red guibg=darkred
 au BufNewFile,BufRead *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+let g:ycm_python_binary_path='python'
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
