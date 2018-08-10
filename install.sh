@@ -14,3 +14,7 @@ sudo apt-get -y install python-dev python3-dev
 
 sudo apt-get -y install man
 sudo apt-get -y install curl
+
+curl -O https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
+
