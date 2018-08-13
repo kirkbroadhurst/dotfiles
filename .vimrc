@@ -15,6 +15,8 @@ Plugin 'gmarik/Vundle.vim'
 " used Bundle instead of Plugin)
 Plugin 'vim-scripts/indentpython.vim'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'chase/vim-ansible-yaml'
+
 " ...
 
 " All of your Plugins must be added before the following line
@@ -32,6 +34,9 @@ set foldmethod=indent
 set foldlevel=99
 nnoremap <space> za
 
+" set line numbers
+set number
+
 " python indenting
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
@@ -42,6 +47,18 @@ au BufNewFile,BufRead *.py
     \ set autoindent |
     \ set fileformat=unix |
     \ set encoding=utf-8
+
+" yaml formatting
+au BufNewFile,BufRead *.yml,*.yaml
+     \ set filetype=ansible
+"    \ set tabstop=2 |
+"    \ set softtabstop=2 |
+"    \ set shiftwidth=2 |
+"    \ set expandtab |
+"    \ set autoindent |
+"    \ set fileformat=unix |
+"    \ set encoding=utf-8
+
 
 "define BadWhitespace before using in a match
 highlight BadWhitespace ctermbg=red guibg=darkred
