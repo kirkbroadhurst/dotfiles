@@ -19,6 +19,7 @@ Bundle 'chase/vim-ansible-yaml'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'heavenshell/vim-pydocstring'
 
 " ...
 
@@ -40,11 +41,13 @@ nnoremap <space> za
 " set line numbers
 set number
 
+" default tab things
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+
 " python indenting
 au BufNewFile,BufRead *.py
-    \ set tabstop=4 |
-    \ set softtabstop=4 |
-    \ set shiftwidth=4 |
     \ set textwidth=79 |
     \ set expandtab |
     \ set autoindent |
